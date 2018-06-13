@@ -6,63 +6,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Survey Form</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
 
-  <h1 id="title">Survey Form</title>
+  <!-- start header -->
+  <header id="header">
+    <h1 id="title">Survey Form</h1>
+    <p id="description"><em>How was your experience with us?</em></p>
+  </header>
+  <!-- end header -->
 
-  <p id="description">description</p>
+  <!-- start main -->
+  <main id="main">
 
-  <!-- start form -->
+    <!-- start form -->
+    <form id="survey-form">
 
-  <form id="survey-form">
+      <div class="flexdiv-center">
+        <label id="name-label" for "name">* Name</label>
+        <div class="input">
+          <input id="name" type=“text” placeholder="Enter your name" required>
+        </div>
+      </div>
 
-    <label id="name-label" for "name">
-      <input id="name" type=“text” placeholder="Enter your name" required>
-    </label>
+      <div class="flexdiv-center">
+        <label id="email-label" for "email">* Email</label>
+        <div class="input">
+        <input id="email" type="email" placeholder="Enter your email address" required>
+        </div>
+      </div>
 
-    <label id="email-label" for "email">
-      <input id="email" type="email" placeholder="Enter your email address" required>
-    </label>
+      <div class="flexdiv-center">
+        <label id="number-label" for "number">Age</label>
+        <div class="input">
+          <input id="number" type="number" min="0" max="130" placeholder="Enter your age">
+        </div>
+      </div>
 
-    <label id="number-label" for "number">
-      <input id="number" type="number" min="0" max="10" placeholder="Enter a number">
-    </label>
+      <div class="flexdiv">
+        <label id="checkbox-label" for "checkbox">Which of our services did you use?</label>
+        <div class="input">
+          <input type="checkbox" name="checkbox" value="consultancy"> Consultancy<br>
+          <input type="checkbox" name="checkbox" value="web"> Web Application<br>
+          <input type="checkbox" name="checkbox" value="mobile"> Mobile Application<br>
+          <input type="checkbox" name="checkbox" value="assistance"> Virtual Assistance
+        </div>
+      </div>
 
-    <select id="dropdown" name="dropdown">
-      <option value="one">One</option>
-      <option value="two">Two</option>
-      <option value="three">Three</option>
-      <option value="four">Four</option>
-    </select>
+      <div class="flexdiv">
+        <label id="dropdown-label" for "dropdown">How would you rate our services?</label>
+        <div class="input">
+          <select id="dropdown" name="dropdown">
+            <option disabled selected value="none">Please select</option>
+            <option value="good">Good</option>
+            <option value="okay">Okay</option>
+            <option value="bad">Bad</option>
+          </select>
+        </div>
+      </div>
 
-    <input type="radio" name="radio" value="one"> One<br>
-    <input type="radio" name="radio" value="two"> Two<br>
-    <input type="radio" name="radio" value="three"> Three
+      <div class="flexdiv">
+        <label id="radio-label" for "radio">Would you recommend our services?</label>
+        <div class="input">
+          <input type="radio" name="radio" value="yes"> Yes<br>
+          <input type="radio" name="radio" value="no"> No
+        </div>
+      </div>
 
-    <input type="checkbox" name="checkbox" value="one"> One<br>
-    <input type="checkbox" name="checkbox" value="two"> Two
+      <div class="flexdiv">
+        <label id="comments-label" for "comments">Any suggestions?</label>
+        <div class="input">
+          <textarea id="comments" name="comments" rows="10" cols="30" placeholder="Enter your comment"></textarea>
+        </div>
+      </div>
 
-    <textarea name="comments" rows="10" cols="30">
-    </textarea>
+      <div id="thanks">Please hit the Submit button below to the send the form.<br>Thank you for your time.</div>
 
-    <button id="submit" type=“submit”>Submit</button>
+      <div id=button>
+        <button id="submit" type=“submit”>Submit</button>
+      </div>
 
-  </form>
+    </form>
+    <!-- end form -->
 
-  <!-- end form -->
+  </main>
+  <!-- end main -->
 
   <!-- start footer -->
-
   <footer id="footer">
     <p>created by <a href="http://puntahamra.com" target="_blank"><span id="punta"></span></a> <a href="http://puntahamra.com" target="_blank">puntahamra</a></p>
   </footer>
-
   <!-- end footer -->
 
   <!-- freeCodeCamp CDN -->
-
   <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </body>
